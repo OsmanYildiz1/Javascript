@@ -1,0 +1,5 @@
+DOM: Document Object Model. HTML yapısını objelere döndüren yapıdır. 
+Javascripti tarayıcıda kullanmamızı sağlayan yapıdır. 
+<html> root elementtir.
+<head> ve <body> olarak dallanan tüm tagler diğer elementlerdir.
+live server: bu eklenti sayfayı otomatik yenilemeyi sağlar.

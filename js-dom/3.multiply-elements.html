@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card-header">
+      <h3 class="card-title h1" id="title">Todo App 2</h3>
+    </div>
+
+    <ul id="task-list">
+      <li class="task">Görev 1</li>
+      <li class="task">Görev 2</li>
+      <li class="task">Görev 3</li>
+      <li class="task">Görev 4</li>
+    </ul>
+
+    <ul id="task-list2">
+      <li class="task">Görev 1</li>
+      <li class="task">Görev 2</li>
+      <li class="task">Görev 3</li>
+      <li class="task">Görev 4</li>
+    </ul>
+    <script>
+      let sonuc;
+
+      sonuc = document.getElementsByClassName("task")[0]; // task classına sahip elemanların birincisi.
+      sonuc = document.getElementsByClassName("task")[1];
+
+      //   taskList = document.getElementsByClassName("task"); // task classına sahip olanların hepsini atar.
+      //   ul = document.getElementById("task-list2"); // belirli bir kapsama ulaşabiliriz. sürekli document kullanmak zorunda değiliz.
+      //   taskList = ul.getElementsByTagName("li"); // sayfa üzerindeki bütün li elemanlarına ulaş
+
+      taskList = document.querySelectorAll("#task-list li"); // task-list id'si aldındaki li elemanları. selectorall ile css selectors gibi kullanabiliriz
+      //   for (let i = 0; i < taskList.length; i++) {
+      //     console.log(taskList[i]);
+      //   }
+
+      for (let task of taskList) {
+        // classa sahip tüm nesnelere ulaşmak için döngü kullandık.
+        task.style.color = "red";
+        task.style.fontSize = "20px";
+        // task.innerText = "Item";
+      }
+
+      //   console.log(sonuc);
+    </script>
+  </body>
+</html>

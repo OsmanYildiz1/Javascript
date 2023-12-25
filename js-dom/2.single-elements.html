@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card-header">
+      <h3 class="card-title h1" id="title">Todo App 2</h3>
+    </div>
+
+    <ul id="task-list">
+      <li>Görev 1</li>
+      <li>Görev 2</li>
+      <li>Görev 3</li>
+    </ul>
+    <script>
+      let sonuc;
+
+      sonuc = document.getElementById("title"); // id'si title olan element
+      sonuc = document.getElementById("title").id; // id'si title olan elementin id'sini getir.
+      sonuc = document.getElementById("title").className; // id'si title olan elementin class name'i getirilir.
+      sonuc = document.getElementById("title").classList; // id'si title olan elementin class listlerini dizi olarak getirir.
+
+      document.getElementById("title").style.fontSize = "40px"; // idsi title olan elemanın font stilleri vs gibi css özelliklerini değiştirebiliriz.
+      document.getElementById("title").style.color = "blue";
+      document.getElementById("title").style.fontWeight = "bold";
+      //   document.getElementById("title").style.display = "none";
+      document.getElementById("title").innerText = "<p>Todo App</p>"; // inner text etiketleri görmez.
+      //   document.getElementById("title").innerHTML = "<p>Todo App</p>"; // inner htmlyi etiketleri kullanarak içeriği değiştirebiliriz.
+
+      sonuc = document.querySelector(".card-header"); // querySelector: istediğimiz sınıfa ve ya id'ye veya etikete ulaşmayı sağlar.
+      sonuc = document.querySelector("div"); // karşılaştığı ilk dive ulaşır.
+
+      sonuc = document.querySelector("li"); // karşılaştığı ilk li
+      sonuc = document.querySelector("li:first-child"); // css seçim araçlarıyla aynı şekilde seçim yapılabilir.
+      sonuc = document.querySelector("li:last-child");
+      sonuc = document.querySelector("li:nth-child(2)"); // 2. li elemanını getirir.
+      console.log(sonuc);
+    </script>
+  </body>
+</html>
