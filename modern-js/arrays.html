@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sayilar = [1,5,7,3,2,67];
+        // const tekSayilar =[]
+        // for(let sayi of sayilar){
+        //     if(sayi%2==1){
+        //     tekSayilar.push(sayi);
+        //     }
+        // }
+
+        //FİLTER METODU
+        // const tekSayiKontrol = (sayi) => sayi%2 == 1; 
+        // const tekSayilar = sayilar.filter(tekSayiKontrol); // filter: koşulu sağlayan dizinin elemanlarını dizi olarak döndürür.
+        // const tekSayilar =sayilar.filter((sayi) =>sayi%2==1);  //daha kısa hali
+
+        //    MAP METODU
+        // dizinin her elemanını bir işleme tabi tutup yeni dizi olarak döndürür.
+       // bir koşul veya karşılaştırma yapacaksak filter yapmayacaksak map kullanılır.
+        // const tekSayilar = sayilar.map((sayi) => sayi%2 ==1);
+
+        const urunler = [
+            {urunAdi: "iphone 11", fiyat:12000},
+            {urunAdi: "iphone 12", fiyat:15000},
+            {urunAdi: "iphone 13", fiyat:18000},
+            {urunAdi: "iphone 13 pro", fiyat:22000},
+        ]
+        // const sonuc = urunler.map(urun => urun.urunAdi); // sadece ürün isimleri.
+        // const sonuc = urunler.filter(urun => urun.fiyat > 15000);
+
+        // const sonuc = urunler.filter(urun => urun.fiyat >= 15000).map(urun => urun.urunAdi); 
+        // filterelenen değerde bir dizi oldugundan map metoduyla sadece isimlerini tutan bir dizi tanımladık.
+        
+        // FIND METODU
+        // İlk elemanı alır
+        // const sonuc = urunler.find(urun => urun.fiyat > 12000);
+        const sonuc = urunler.findIndex(urun => urun.fiyat > 12000); // findindex ilk elemanın indeksini alır. şartı sağlayan yoksa -1 döner
+
+        console.log(urunler[sonuc]);
+    </script>
+</body>
+</html>

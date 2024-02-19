@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ogrenciler = new Map();   // map object ypaısına benzer
+        ogrenciler.set(1 ,"ali yılmaz");    //set değer atama
+        ogrenciler.set("12345678911", "efe can");
+        ogrenciler.set(true, "ali can");
+
+        
+        // console.log(ogrenciler.get(1)); //get keyi girilen  değeri döndürür.
+        // console.log(ogrenciler.get(true));
+
+        // let sonuc; 
+        // sonuc =ogrenciler.size; // boyut
+        // sonuc = ogrenciler.has(1); // girilen key mapte var mı kontrol eder true ya da false döner.
+        // // ogrenciler.delete(1); // keyi 1 olan elemanı siler.
+        // sonuc =ogrenciler.size;
+        // // ogrenciler.clear(); // mapi komple temizler.
+        // console.log(ogrenciler);
+        
+
+        // for(let x of ogrenciler.keys()){    // key bilgilerini aldık.
+        //     console.log(x); 
+        // }
+
+        // for(let x of ogrenciler.values()){  // values alındı
+        //     console.log(x);
+        // }
+
+        // for(let x of ogrenciler.entries()){ // key ve values çiftlerini beraber getirir.
+        //     console.log(x); 
+        // }
+
+        for(let [key, value] of ogrenciler.entries()){  // bu sekilde yan yana getirmis olduk.
+            console.log(key + " : " + value);
+        }
+    </script>
+</body>
+</html>

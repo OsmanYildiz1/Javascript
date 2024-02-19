@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Kisi => k1, k2
+        // Ogrenci => o1, o2
+
+
+        class Kisi {
+            constructor (ad, dogumYili){
+                console.log("kisi contructor");
+
+                this.ad = ad;
+                this.dogumYili = dogumYili;
+            }
+
+            yasHesapla(){
+                let tarih = new Date().getFullYear();
+                return tarih - this.dogumYili;
+            }
+            kendiniTanit(){
+                return `Benim adım ${this.ad}`;
+            }
+        }
+
+        class Ogrenci extends Kisi { // kalıtım ogrenci kisiden miras aldı
+            constructor(ad, dogumYili, okulNumarası){
+                console.log("ogrenci contructor");
+               super(ad, dogumYili);    // super metoduyla parent sınıfa ad ve dogumyilini gönderdik.
+               this.okulNumarası = okulNumarası;
+            }
+
+            dersCalis(){
+               return `${this.ad} ders çalışıyor`;
+            }
+
+            kendiniTanit(){
+                return `Benim adım ${this.ad} ve okul numaram ${this.okulNumarası}`;
+            }
+        }
+
+        class Ogretmen  extends Kisi { 
+            constructor(ad, dogumYili, brans){
+               super(ad, dogumYili);    // super metoduyla parent sınıfa ad ve dogumyilini gönderdik.
+               this.brans = brans;
+            }
+
+            dersAnlat(){
+               return `Benim adım ${this.ad} ${this.brans} dersini anlatıyorum`;
+            }
+
+            kendiniTanit(){
+                return `Benim adım ${this.ad} ${this.brans} derslerine giriyorum`;
+            }
+        }
+        let kisi = new Kisi("Ali", 1990);
+        let ogrenci = new Ogrenci("Ahmet", 2000, 123);
+        let ogretmen = new Ogretmen("Betül", 1985, "Algoritma");
+
+        // console.log(kisi.yasHesapla());
+        // console.log(ogrenci.yasHesapla());
+        // console.log(ogrenci.dersCalis());
+        console.log(kisi.kendiniTanit());
+        console.log(ogrenci.kendiniTanit());
+        console.log(ogretmen.kendiniTanit());
+        console.log(ogretmen.dersAnlat());
+    </script>
+</body>
+</html>
